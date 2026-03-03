@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/03 11:08:33 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/03 11:58:05 by oamairi          ###   ########.fr       */
+/*   Created: 2026/03/03 15:00:32 by oamairi           #+#    #+#             */
+/*   Updated: 2026/03/03 15:44:22 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef _WEAPON_H_
+# define _WEAPON_H_
+# include <iostream>
 
-	int	main(void)
+class Weapon
 {
-	Zombie *z = newZombie("Heap Zombie");
-	z->announce();
+private:
+	std::string type;
+	public:
+	Weapon();
+	Weapon(std::string name);
+	void	setType(std::string type);
+	const std::string	getType(void);
+	~Weapon();
+};
 
-	randomChump("Stack Zombie");
-	delete z;
-	return (0);
-}
+#endif

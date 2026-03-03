@@ -5,19 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/03 11:08:33 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/03 11:58:05 by oamairi          ###   ########.fr       */
+/*   Created: 2026/03/03 15:35:17 by oamairi           #+#    #+#             */
+/*   Updated: 2026/03/03 15:55:49 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-	int	main(void)
+int main()
 {
-	Zombie *z = newZombie("Heap Zombie");
-	z->announce();
-
-	randomChump("Stack Zombie");
-	delete z;
-	return (0);
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
+	return 0;
 }

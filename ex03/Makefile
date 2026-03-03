@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/03/03 12:47:45 by oamairi           #+#    #+#              #
-#    Updated: 2026/03/03 13:38:01 by oamairi          ###   ########.fr        #
+#    Created: 2026/03/03 15:37:22 by oamairi           #+#    #+#              #
+#    Updated: 2026/03/03 15:37:50 by oamairi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ex02
+NAME	=	ex03
 
 CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-SRCS	=	main.cpp
+SRCS	=	main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 

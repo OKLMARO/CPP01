@@ -5,24 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/03 11:39:55 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/03 12:02:48 by oamairi          ###   ########.fr       */
+/*   Created: 2026/03/03 12:05:10 by oamairi           #+#    #+#             */
+/*   Updated: 2026/03/03 14:07:37 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
 int	main(void)
 {
-	int N = 5;
-	Zombie *z = zombieHorde(N, "HORDE DE ZOMBIE");
-	if (!z)
-		return (1);
-	for (int i = 0; i < N; i++)
-	{
-		std::cout << "Numero: " << i << " ";
-		z[i].announce();
-	}
-	delete[] z;
+	std::string string = "HI THIS IS BRAIN";
+	std::string *stringPTR = &string;
+	std::string &stringREF = string;
+	std::cout << "The memory address of the string variable: " << &string << "\n";
+	std::cout << "The memory address held by stringPTR: " << stringPTR << "\n";
+	std::cout << "The memory address held by stringREF: " << &stringREF << "\n";
+	std::cout << "The value of the string variable: " << string << "\n";
+	std::cout << "The value pointed to by stringPTR: " << *stringPTR << "\n";
+	std::cout << "The value pointed to by stringREF: " << stringREF << "\n";
 	return (0);
 }
