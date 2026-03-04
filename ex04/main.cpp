@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 11:57:45 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/04 14:11:44 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/04 14:23:48 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int argc, char **argv)
 	size_t i;
 	std::string s1 = argv[2];
 	std::string s2 = argv[3];
-	if (s1.empty() == true || s2.empty() == true || !s1.compare(s2.c_str()))
+	if (s1.empty() == true || s2.empty() == true)
 		return (1);
 	std::ifstream file(argv[1]);
 	if (!file)

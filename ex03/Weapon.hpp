@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:00:32 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/03 15:44:22 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/04 14:18:40 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ private:
 	Weapon();
 	Weapon(std::string name);
 	void	setType(std::string type);
-	const std::string	getType(void);
+	const std::string	&getType(void);
 	~Weapon();
 };
 
