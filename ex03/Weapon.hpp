@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 15:00:32 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/04 14:18:40 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/04 14:27:17 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ class Weapon
 {
 private:
 	std::string type;
-	public:
+public:
 	Weapon();
 	Weapon(std::string name);
 	void	setType(std::string type);
