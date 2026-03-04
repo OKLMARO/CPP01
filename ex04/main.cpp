@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 11:57:45 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/04 13:56:09 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/04 14:11:44 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ int	main(int argc, char **argv)
 	size_t i;
 	std::string s1 = argv[2];
 	std::string s2 = argv[3];
+	if (s1.empty() == true || s2.empty() == true || !s1.compare(s2.c_str()))
+		return (1);
 	std::ifstream file(argv[1]);
-	if (s1.empty() == true || s2.empty() == true || !file)
+	if (!file)
 		return (1);
 	std::string new_file_name;
 	new_file_name.append(argv[1]);
@@ -32,12 +34,15 @@ int	main(int argc, char **argv)
 	std::string ligne;
 	while (std::getline(file, ligne))
 	{
+		i = 0;
 		while (true)
 		{
-			i = ligne.find(s1);
+			i = ligne.find(s1, i);
 			if (i == std::string::npos)
 				break ;
-			ligne.replace(i, s1.size(), s2);
+			ligne.erase(i, s1.size());
+			ligne.insert(i, s2.c_str());
+			i = i + s2.size();
 		}
 		new_file << ligne << "\n";
 	}
